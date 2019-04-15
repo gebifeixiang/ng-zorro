@@ -1,0 +1,134 @@
+<div nz-row style="background: #ECECEC;padding:30px;min-height: 100%;">
+
+  <a [routerLink]="['/dev-center/service']" class="more"> 服务中心</a>
+
+  <h2>公共服务</h2>
+
+  <div nz-col nzSpan="4">
+    <nz-card class="default-card" [nzBordered]="false" nzTitle="开发者中心">
+      <p>
+        <nz-tag [nzColor]="'#2db7f5'">前台</nz-tag>
+        开发者中心
+        <a [routerLink]="['/dev-center']" class="more"> 进入</a>
+      </p>
+    </nz-card>
+    <ng-template #logTemplate>
+      <a style="color: gray;">敬请期待...</a>
+    </ng-template>
+  </div>
+
+
+  <div nz-col nzSpan="4">
+    <nz-card class="default-card" [nzBordered]="false" nzTitle="国际化i18n">
+      <p>
+        <nz-tag [nzColor]="'#2db7f5'">前台</nz-tag>
+        国际化管理界面
+        <a [routerLink]="['/dev-center/i18n']" class="more" target="_blank"> 进入</a>
+      </p>
+      <p>
+        <nz-tag [nzColor]="'#2db7f5'">后台</nz-tag>
+        国际化后台接口
+        <a href="http://10.6.70.187:7008/v1/swagger-ui.html" class="more" target="_blank"
+           target="_blank"> 进入</a>
+      </p>
+    </nz-card>
+  </div>
+
+  <div nz-col nzSpan="4">
+    <nz-card class="default-card" [nzBordered]="false" nzTitle="文件管理服务">
+      <p>
+        <nz-tag [nzColor]="'#2db7f5'">后台</nz-tag>
+        文件管理服务后台接口
+        <a href="http://10.6.0.218:7006/v1/swagger-ui.html" class="more" target="_blank"
+           target="_blank"> 进入</a></p>
+    </nz-card>
+  </div>
+
+  <div nz-col nzSpan="4">
+    <nz-card class="default-card" [nzBordered]="false" nzTitle="Redis 服务">
+      <p>
+        <nz-tag [nzColor]="'#2db7f5'">后台</nz-tag>
+        Redis 服务后台接口
+      </p>
+    </nz-card>
+    <ng-template #redisTemplate>
+      <a href="http://10.6.0.218:7004/v1/swagger-ui.html" target="_blank"> 进入</a>
+    </ng-template>
+  </div>
+
+
+  <div nz-col nzSpan="4">
+    <nz-card class="default-card" [nzBordered]="false" nzTitle="网关服务">
+      <p>网关服务</p>
+    </nz-card>
+    <ng-template #gwTemplate>
+      <a style="color: gray;">敬请期待...</a>
+    </ng-template>
+  </div>
+
+  <div nz-col nzSpan="4">
+    <nz-card class="default-card" [nzBordered]="false" nzTitle="系统发布管理">
+      <p>系统发布管理</p>
+    </nz-card>
+    <ng-template #logTemplate>
+      <a style="color: gray;">敬请期待...</a>
+    </ng-template>
+  </div>
+
+
+  <div style="clear: both;height: 50px;">
+  </div>
+
+  <h2>业务服务</h2>
+  <div nz-col nzSpan="4">
+    <nz-card class="default-card" [nzBordered]="false" nzTitle="申请易系统">
+      <p>
+        <nz-tag [nzColor]="'#2db7f5'">前台</nz-tag>
+        申请易系统前台界面
+        <a href="http://10.6.1.101/web/agent/e-request/login" class="more" target="_blank">
+          进入</a>
+      </p>
+      <p>
+        <nz-tag [nzColor]="'#2db7f5'">后台</nz-tag>
+        申请易系统后台接口
+        <a href="http://10.6.0.218:7002/v1/swagger-ui.html" class="more" target="_blank"
+           target="_blank"> 进入</a>
+      </p>
+    </nz-card>
+  </div>
+
+  <div nz-col nzSpan="4">
+    <nz-card class="default-card" [nzBordered]="false" nzTitle="匿名申诉系统">
+      <p>
+        <nz-tag [nzColor]="'#2db7f5'">前台</nz-tag>
+        匿名申诉系统前台界面
+        <a href="http://10.6.1.101/web/feedback" class="more" target="_blank">
+          进入</a>
+      </p>
+      <p>
+        <nz-tag [nzColor]="'#2db7f5'">后台</nz-tag>
+        匿名申诉系统后台接口
+        <a href="http://10.6.0.218:7007/v1/swagger-ui.html" class="more" target="_blank"
+           target="_blank"> 进入</a>
+      </p>
+    </nz-card>
+  </div>
+
+
+  <div nz-col nzSpan="4">
+    <nz-card class="default-card" [nzBordered]="false" nzTitle="iLife系统" [nzExtra]="iLifeTemplate">
+      <p>
+        <nz-tag [nzColor]="'#2db7f5'">前台</nz-tag>
+        iLife系统前台界面
+      </p>
+      <p>
+        <nz-tag [nzColor]="'#2db7f5'">后台</nz-tag>
+        iLife系统后台接口
+      </p>
+    </nz-card>
+    <ng-template #iLifeTemplate>
+      <a style="color: gray;">敬请期待...</a>
+    </ng-template>
+  </div>
+
+</div>

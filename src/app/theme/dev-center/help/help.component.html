@@ -1,0 +1,31 @@
+<nz-layout class="layout">
+  <nz-header class="theme-header-1">
+    <div class="theme-header-logo">
+      <a [routerLink]="['/dev-center']"><img src="assets/imgs/logo/logo.png" style="width: 160px;"></a>
+    </div>
+    <ul nz-menu [nzMode]="'horizontal'" style="line-height: 64px;">
+      <li class="f-s-18">微平台 · 帮助中心</li>
+    </ul>
+  </nz-header>
+
+  <nz-layout style="background-color: #ffffff;padding: 5%;">
+    <nz-content>
+      <nz-list [nzDataSource]="data" [nzRenderItem]="item" [nzGrid]="{gutter: 16, span: 4}">
+        <ng-template #item let-item>
+          <nz-list-item [nzContent]="nzContent">
+            <ng-template #nzContent>
+              <nz-card [nzTitle]="item.title" [nzActions]="[actionEllipsis]">
+                {{item.content}}
+              </nz-card>
+              <ng-template #actionEllipsis>
+                <a class="text-primary" (click)="onClickLink(item)">进入</a>
+              </ng-template>
+            </ng-template>
+          </nz-list-item>
+        </ng-template>
+      </nz-list>
+    </nz-content>
+  </nz-layout>
+
+
+</nz-layout>

@@ -1,0 +1,17 @@
+{
+  "STATISTIC": "统计",
+  "STATISTIC_DESC": "与上周相比",
+  "DAILY_ORDER": "每日订单",
+  "DAILY_ORDER_DESC": "与昨天相比",
+  "REVENUE": "收入  2018",
+  "REVENUE_DESC": "今年收入",
+  "order": {
+    "RECENT_ORDERS": "近期订单",
+    "IMAGE": "图片",
+    "PRODUCT_CODE": "产品代码",
+    "CUSTOMER": "顾客",
+    "PURCHASED_ON": "购买日期",
+    "STATUS": "状态",
+    "TRANSACTION": "交易ID"
+  }
+}

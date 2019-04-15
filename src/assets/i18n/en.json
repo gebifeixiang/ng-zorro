@@ -1,0 +1,17 @@
+{
+  "STATISTIC": "Statistics",
+  "STATISTIC_DESC": "Compared to last week",
+  "DAILY_ORDER": "Daily order",
+  "DAILY_ORDER_DESC": "Compare to yesterday",
+  "REVENUE": "Revenue 2018",
+  "REVENUE_DESC": "This year revenue",
+  "order": {
+    "RECENT_ORDERS": "Recent Orders",
+    "IMAGE": "Image",
+    "PRODUCT_CODE": "Product Code",
+    "CUSTOMER": "Customer",
+    "PURCHASED_ON": "Purchased On",
+    "STATUS": "Status",
+    "TRANSACTION": "Transaction"
+  }
+}

@@ -1,0 +1,126 @@
+<nz-layout class="layout">
+  <nz-header class="theme-header-1">
+    <div class="theme-header-logo">
+      <a [routerLink]="['/dev-center']">
+        <img src="assets/imgs/logo/logo.png" style="width: 160px;">
+      </a>
+    </div>
+    <ul nz-menu [nzMode]="'horizontal'" style="line-height: 64px;">
+      <li nz-menu-item>{{systembase?.name}}系统主页</li>
+    </ul>
+  </nz-header>
+
+  <nz-layout>
+    <nz-content style="background-color: #ffffff;padding: 50px;">
+      <nz-breadcrumb class="p-b-15 f-s-16">
+        <nz-breadcrumb-item>
+          主页
+        </nz-breadcrumb-item>
+        <nz-breadcrumb-item>
+          <a [routerLink]="['/dev-center/default']">项目开发</a>
+        </nz-breadcrumb-item>
+        <nz-breadcrumb-item>
+          {{systembase?.name}}
+        </nz-breadcrumb-item>
+      </nz-breadcrumb>
+
+
+      <nz-divider nzDashed [nzText]="config">
+        <ng-template #config><span class="text-gray"><i nz-icon type="setting" class="m-r-10"></i>系统配置</span>
+        </ng-template>
+      </nz-divider>
+
+      <nz-list [nzDataSource]="data" [nzRenderItem]="item" [nzGrid]="{gutter: 16, span: 4}">
+        <ng-template #item let-item>
+          <nz-list-item [nzContent]="nzContent">
+            <ng-template #nzContent>
+              <nz-card [nzTitle]="item.title" [nzActions]="[actionEllipsis]">
+                {{item.content}}
+              </nz-card>
+              <ng-template #actionEllipsis>
+                <a class="text-primary" (click)="onClickLink(item)">进入</a>
+              </ng-template>
+            </ng-template>
+          </nz-list-item>
+        </ng-template>
+      </nz-list>
+
+      <nz-divider nzDashed [nzText]="rukou">
+        <ng-template #rukou><span class="text-gray"><i nz-icon type="setting" class="m-r-10"></i>系统入口</span>
+        </ng-template>
+      </nz-divider>
+
+      <nz-table #syslinksTable [nzData]="syslinks">
+        <thead>
+        <tr>
+          <th>服务名</th>
+          <th>描述</th>
+          <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of syslinksTable.data">
+          <td>{{item.name}}</td>
+          <td>{{item.desc}}</td>
+          <td>
+            <a [href]="item.url" target="_blank">链接入口</a>
+          </td>
+        </tr>
+        </tbody>
+      </nz-table>
+
+
+      <nz-divider nzDashed [nzText]="huanjing">
+        <ng-template #huanjing><span class="text-gray"><i nz-icon type="setting" class="m-r-10"></i>系统环境</span>
+        </ng-template>
+      </nz-divider>
+
+      <nz-table #basicTable [nzData]="dataSet">
+        <thead>
+        <tr>
+          <th>IP</th>
+          <th>服务个数</th>
+          <th>服务说明</th>
+          <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let data of basicTable.data">
+          <td>{{data.address}}</td>
+          <td>{{data.num}}</td>
+          <td>{{data.serverNames}}</td>
+          <td>
+            <a class="text-muted">详情</a>
+            <nz-divider nzType="vertical"></nz-divider>
+            <a class="text-muted">链接</a>
+          </td>
+        </tr>
+        </tbody>
+      </nz-table>
+
+
+      <nz-divider nzDashed [nzText]="text">
+        <ng-template #text><span class="text-gray"><i nz-icon type="clock-circle-o"></i> 系统版本与发布</span></ng-template>
+      </nz-divider>
+
+      <div style="padding: 2% 20%;">
+        <nz-timeline nzMode="alternate">
+          <nz-timeline-item>系统v1.0版本的上线 2018-08-01</nz-timeline-item>
+          <nz-timeline-item nzColor="green">系统v1.1版本的上线 2018-09-01</nz-timeline-item>
+          <nz-timeline-item [nzDot]="dotTemplate">系统v2版本的上线 2018-10-01</nz-timeline-item>
+          <nz-timeline-item nzColor="red">系统v3版本的上线 2018-11-01</nz-timeline-item>
+          <nz-timeline-item>系统v4版本的上线 2018-12-01</nz-timeline-item>
+          <nz-timeline-item [nzDot]="LoadingTemplate">更新中...</nz-timeline-item>
+        </nz-timeline>
+        <ng-template #dotTemplate>
+          <i nz-icon type="clock-circle-o" style="font-size: 16px;"></i>
+        </ng-template>
+        <ng-template #LoadingTemplate>
+          <i nz-icon type="loading" style="font-size: 16px;"></i>
+        </ng-template>
+      </div>
+    </nz-content>
+  </nz-layout>
+
+
+</nz-layout>

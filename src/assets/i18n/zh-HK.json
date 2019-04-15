@@ -1,0 +1,17 @@
+{
+  "STATISTIC": "統計",
+  "STATISTIC_DESC": "與上週相比",
+  "DAILY_ORDER": "每日訂單",
+  "DAILY_ORDER_DESC": "與昨天相比",
+  "REVENUE": "收入  2018",
+  "REVENUE_DESC": "今年收入",
+  "order": {
+    "RECENT_ORDERS": "近期訂單",
+    "IMAGE": "圖片",
+    "PRODUCT_CODE": "產品代碼",
+    "CUSTOMER": "顧客",
+    "PURCHASED_ON": "購買日期",
+    "STATUS": "狀態",
+    "TRANSACTION": "交易ID"
+  }
+}

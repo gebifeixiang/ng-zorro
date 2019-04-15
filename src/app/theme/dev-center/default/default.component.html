@@ -1,0 +1,116 @@
+<nz-layout class="layout">
+  <nz-header class="theme-header-1">
+    <div class="theme-header-logo">
+      <a [routerLink]="['']"><img src="assets/imgs/logo/logo.png" style="width: 160px;"></a>
+    </div>
+    <div class="text-gray">
+      <ul nz-menu [nzMode]="'horizontal'" style="line-height: 64px;">
+
+        <li nz-menu-item nzDisabled><i nz-icon type="home" theme="outline"></i>主页</li>
+
+        <li nz-submenu>
+          <span title>
+           <i nz-icon type="appstore" theme="outline"></i>
+             产品与服务
+            <i nz-icon type="caret-down" theme="outline" class="m-l-10"></i>
+          </span>
+          <ul>
+            <li nz-menu-group>
+              <span title>协同办公</span>
+              <ul>
+                <li nz-menu-item>
+                  <a href="http://10.28.84.80/pro/index.php" target="_blank"></a>禅道
+                </li>
+                <li nz-menu-item>
+                  <a href="http://10.28.84.80/mantis/login_page.php" target="_blank"></a>Mantis
+                </li>
+                <li nz-menu-item>
+                  <a href="http://10.28.84.28" target="_blank"></a>泛微OA
+                </li>
+                <li nz-menu-item>
+                  <a href="http://10.28.84.29:8212/iModule-work-etime-web/sys/loginpage.do" target="_blank"></a>考勤
+                </li>
+                <li nz-menu-item>
+                  <a href="http://10.28.84.31:8080/assessment/gotoLogin.do" target="_blank"></a>考核
+                </li>
+              </ul>
+            </li>
+            <li nz-menu-group>
+              <span title>团险服务</span>
+              <ul>
+                <li nz-menu-item>
+                  <a href=" https://gp.chinalife.com.hk" target="_blank"></a>团险网上服务
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li nz-menu-item [nzSelected]="true">
+          <a [routerLink]="['/dev-center/default']"><i nz-icon type="tool" theme="outline"></i>项目开发</a>
+        </li>
+        <li nz-menu-item>
+          <a [routerLink]="['/dev-center/help']"><i nz-icon type="question-circle" theme="outline"></i>帮助中心</a>
+        </li>
+      </ul>
+    </div>
+  </nz-header>
+
+  <nz-layout style="padding: 50px;background-color: white;">
+    <nz-content>
+
+      <nz-breadcrumb class="p-b-15 f-s-16">
+        <nz-breadcrumb-item>
+          主页
+        </nz-breadcrumb-item>
+        <nz-breadcrumb-item>
+          项目开发
+        </nz-breadcrumb-item>
+      </nz-breadcrumb>
+
+      <nz-divider nzDashed [nzText]="config">
+        <ng-template #config><span class="text-gray"><i nz-icon type="appstore" class="m-r-10"></i>系统列表</span>
+        </ng-template>
+      </nz-divider>
+
+      <div nz-row>
+        <div nz-col nzSpan="5" *ngFor="let item of systembases">
+          <nz-card style="max-width:300px;" [nzCover]="coverTemplate"
+                   [nzActions]="[actionSetting,actionEdit,actionEllipsis]">
+
+            <nz-card-meta [nzTitle]="item.name" [nzDescription]="item.description"
+                          [nzAvatar]="avatarTemplate"></nz-card-meta>
+            <p>{{item.domain}}</p>
+          </nz-card>
+          <ng-template #avatarTemplate>
+            <nz-avatar [nzSize]="48"
+                       [nzSrc]="'http://p.qlogo.cn/bizmail/d3KVTTvjMXPn0lMGAYiadT2DGD7DcslwLvNZeS6KyVvTccoYzAB8udw/0'"></nz-avatar>
+            <div class="text-center m-t-10">贾舟</div>
+          </ng-template>
+          <ng-template #coverTemplate>
+            <img alt="404 Not Found" [src]="item.logoUrl" (click)="onClickLogo(item)"
+                 style="cursor: pointer;box-shadow: 0 1px 10px #c0c2c3;"/>
+          </ng-template>
+          <ng-template #actionSetting>
+            <i nz-icon type="setting" (click)="onClickSetting(item)"></i>
+          </ng-template>
+          <ng-template #actionEdit>
+            <i nz-icon type="edit" (click)="onClickEdit(item)"></i>
+          </ng-template>
+          <ng-template #actionEllipsis>
+            <i nz-icon type="ellipsis" (click)="onClickEllipsis(item)"></i>
+          </ng-template>
+        </div>
+      </div>
+    </nz-content>
+  </nz-layout>
+
+</nz-layout>
+
+
+<nz-drawer [nzClosable]="true" [nzVisible]="editVisible" nzPlacement="right" nzTitle="系统信息修改"
+           (nzOnClose)="editDrawerClose()">
+  <p>此功能正在开发中...</p>
+</nz-drawer>
+
+
+

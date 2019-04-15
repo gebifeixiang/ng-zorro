@@ -1,0 +1,85 @@
+@import "../../../../../scss/variable";
+
+.demos-header {
+
+  background-color: white;
+  padding: 0px 20px;
+  box-shadow: 0 2px 8px #c0c2c3;
+  z-index: 10;
+
+  .demos-logo {
+    width: 160px;
+    height: 64px;
+    background: rgba(255, 255, 255, .2);
+    margin-right: 40px;
+    float: left;
+  }
+
+}
+
+.demos-body {
+  min-height: 600px;
+}
+
+.i18n-left-tree {
+  background: #fff;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.i18n-body {
+  background-color: #ffffff;
+  min-height: 700px;
+  padding: 10px;
+}
+
+:host ::ng-deep .demo-loadmore-list {
+  min-height: 350px;
+}
+
+:host ::ng-deep .loadmore {
+  text-align: center;
+  margin-top: 12px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  border-top: 1px solid rgb(232, 232, 232);
+  padding: 10px 16px;
+  text-align: center;
+  left: 0px;
+  background: #fff;
+}
+
+.spiner {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  margin: 20px 0;
+}
+
+.tree-node {
+  cursor: pointer;
+  line-height: 24px;
+  margin-left: 4px;
+  display: inline-block;
+  margin: 0 -1000px;
+  padding: 0 1000px;
+}
+
+.tree-active {
+  color: $primary-color;
+  cursor: pointer;
+  line-height: 24px;
+  margin-left: 4px;
+  display: inline-block;
+  margin: 0 -1000px;
+  padding: 0 1000px;
+  background-color: #e9e9e9;
+}
