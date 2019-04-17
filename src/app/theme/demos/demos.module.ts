@@ -1,22 +1,22 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common'
-import { NgZorroAntdModule } from 'ng-zorro-antd';
+import {SharedModule} from '../../shared/shared.module';
 import {DemosComponent} from './demos.component';
 import {DemosRoutingModule} from './demos-routing.module';
+import {DemosDefaultComponent} from './default/demos-default.component';
+import {DemosI18nComponent} from './i18n/demos-i18n.component';
 
 @NgModule({
   imports: [
-    CommonModule,
-    NgZorroAntdModule,
+    SharedModule,
     DemosRoutingModule
   ],
   declarations: [
-    DemosComponent
+    DemosComponent,
+    DemosDefaultComponent,
+    DemosI18nComponent
   ],
-  providers: [
-  ],
-  exports: [
-  ]
+  providers: [],
+  exports: []
 })
 export class DemosModule {
 

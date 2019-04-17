@@ -1,0 +1,22 @@
+.demos {
+  margin-top: 50px;
+}
+
+.docs {
+  width: 500px;
+  margin: 0 auto;
+  table {
+    width: 100%;
+    tr {
+
+    }
+    td:nth-child(1) {
+      padding: 10px;
+      text-align: center;
+    }
+    td:nth-child(2) {
+      padding: 10px;
+      text-align: left;
+    }
+  }
+}

@@ -1,22 +1,15 @@
 import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'default',
+    redirectTo: 'demos',
     pathMatch: 'full'
-  },
-  {
-    path: 'default',
-    loadChildren: './theme/default/default.module#DefaultModule'
   },
   {
     path: 'demos',
     loadChildren: './theme/demos/demos.module#DemosModule'
-  }, {
-    path: 'dev-center',
-    loadChildren: './theme/dev-center/dev-center.module#DevCenterModule'
   }
 ];
 

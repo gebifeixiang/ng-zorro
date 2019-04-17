@@ -1,0 +1,23 @@
+<section class="demos">
+  <div class="docs">
+    <table>
+      <tbody>
+      <tr>
+        <td colspan="2">
+          <div class="f-s-28">WelCome to ng-zorro</div>
+        </td>
+      </tr>
+
+      <tr *ngFor="let item of links" class="f-s-16">
+        <td>{{item.name}}</td>
+        <td><a [attr.href]="item.link" target="_blank">查看</a></td>
+      </tr>
+
+      <tr *ngFor="let item of demos" class="f-s-16">
+        <td>{{item.name}}</td>
+        <td><a [routerLink]="item.link">查看</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

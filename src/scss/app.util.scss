@@ -1,20 +1,5 @@
 @import "./variable";
 
-.theme-header-1 {
-  background-color: white;
-  padding: 0px 20px;
-  box-shadow: 0 2px 8px #c0c2c3;
-  z-index: 10;
-  .theme-header-logo {
-    width: 160px;
-    height: 64px;
-    background: rgba(255, 255, 255, .2);
-    margin-right: 40px;
-    float: left;
-  }
-
-}
-
 .bg-success {
   background-color: $success-color;
 }

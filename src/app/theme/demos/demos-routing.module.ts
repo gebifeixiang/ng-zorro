@@ -1,31 +1,22 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {DemosComponent} from './demos.component';
+import {DemosDefaultComponent} from './default/demos-default.component';
+import {DemosI18nComponent} from './i18n/demos-i18n.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: DemosComponent,
-    data: {
-      title: '',
-      status: false,
-    },
-    children: [
-      {
-        path: 'zorro',
-        loadChildren: './zorro/zorro.module#ZorroModule'
-      },
-      {
-        path: 'i18n',
-        loadChildren: './i18n/demo-i18n.module#DemoI18nModule'
-      },
-    ]
+    redirectTo: 'default',
+    pathMatch: 'full'
   },
   {
-    path: 'theme',
-    loadChildren: './theme/demo-theme.module#DemoThemeModule'
+    path: 'default',
+    component: DemosDefaultComponent,
+  },
+  {
+    path: 'i18n',
+    component: DemosI18nComponent,
   }
-
 ];
 
 @NgModule({
