@@ -12,7 +12,11 @@
   
 ## 开发
 ### 1. 代理配置
-在工程根目录下载创建 [proxy.conf.json] 文件 , 参考如下配置：
+在工程根目录下载创建 proxy.conf.json 文件 , 参考如下配置：
+```bash
+前端请求 http://127.0.0.1:4200/api/users 实际请求 http://api.***.com/users
+```
+
 ```bash
 {
   "/api/": {
@@ -25,4 +29,3 @@
   }
 }
 ```
-如：前端请求 http://127.0.0.1:4200/api/users 实际请求 http://api.***.com/users
