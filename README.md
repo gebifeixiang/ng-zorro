@@ -1,6 +1,6 @@
-# ClioAntDesign
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
+# ng-zorro框架
+版本：1.1.0
+描述：该框架基于[Angular](https://www.angular.cn) 和组件[ng-zorro](https://ng.ant.design)
 
 ## Development server
 
