@@ -26,11 +26,7 @@ import {ApiService} from './api/index';
   declarations: [],
   providers: [
     {provide: NZ_I18N, useValue: zh_CN},
-    ApiService,
-    SystemServcie,
-    I18nServcie,
-    EurekaServcie,
-    ServiceServcie
+    ApiService
   ]
 })
 export class SharedModule {
