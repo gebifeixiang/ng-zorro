@@ -5,7 +5,8 @@ import {TranslateModule} from '@ngx-translate/core';
 import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
 
 import {HttpClientModule} from '@angular/common/http';
-import {ApiService, EurekaServcie, I18nServcie, ServiceServcie, SystemServcie} from './api/index';
+import {ApiService} from './api/index';
+
 
 @NgModule({
   imports: [

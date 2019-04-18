@@ -23,16 +23,5 @@ export class ApiPath {
     }
     return ApiPath.API_PATH + path;
   }
-
-  //is deploy model
-  static isDeployModel(): boolean {
-    var urls = (window.location + '').split('/');
-    if (urls.length > 3) {
-      if (urls[3] == ApiPath.ROOT_PATH) {
-        return true;
-      }
-    }
-    return false;
-  }
 }
 

@@ -1,5 +1,5 @@
 {
-  "name": "goat-dev-center",
+  "name": "ng-zorro",
   "version": "1.1.0",
   "scripts": {
     "ng": "ng",
@@ -22,6 +22,7 @@
     "@angular/router": "~7.1.0",
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
+    "clio-common": "^1.0.0",
     "core-js": "^2.5.4",
     "ng-zorro-antd": "^7.0.0",
     "rxjs": "~6.3.3",
